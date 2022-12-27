@@ -13,12 +13,10 @@ import { cartoDB_DarkMatter, googleSat, googleStreets, osm, stamen_Watercolor } 
 
 const map = L.map("map").setView([41.1928749994, 74.1323169961], 7);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
-
 const { avarageDatasOfGumus } = useGetAverageGumus(analysesData);
-const infoDashboard = L.control();
-
 const regionsData = [NarynData, OshData, ChuyData, DjalalAbadData, BatkenData, TalasData, YssykKolData, BishkekData];
+
+const infoDashboard = L.control();
 
 for (let [key, value] of Object.entries(avarageDatasOfGumus)) {
   for (let polygon of regionsData) {
