@@ -63,7 +63,7 @@ export const createDiv = (infoDashboard, className) => {
 };
 
 export const createContent = (infoDashboard, props) => {
-  infoDashboard._div.innerHTML = "<h4>регионы Кр</h4>" + (props ? "<b>" + props.id + "</b><br />" : "");
+  infoDashboard._div.innerHTML = "<h4>районы Кр</h4>" + (props ? "<b>" + props.id + "</b><br />" : "");
 };
 
 export const createScaleDirectory = () => {
