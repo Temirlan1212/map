@@ -3,7 +3,7 @@ export const onEachFeatureFunc = (feature, layer) => {
 };
 
 export function getGumusColor(gumus) {
-  return gumus > 5 ? "#800026" : gumus > 4 ? "#BD0026" : gumus > 3 ? "#E31A1C" : gumus > 2 ? "#FC4E2A" : gumus > 1 ? "#FD8D3C" : gumus > 0.5 ? "#FEB24C" : "#FFFFFF";
+  return gumus > 5 ? "#800026" : gumus > 4 ? "#BD0026" : gumus > 3 ? "#E31A1C" : gumus > 2 ? "#FC4E2A" : gumus > 1 ? "#FD8D3C" : gumus > 0 ? "#FEB24C" : "#FFFFFF";
 }
 
 export function regionStyle(feature, regionName, gumus) {
@@ -48,7 +48,7 @@ export function zoomToFeature(e, map) {
   map.fitBounds(e.target.getBounds());
 }
 
-export function onEachFeature(layer, infoDashboard) {
+export function onEachFeature(layer, infoDashboard, map) {
   layer.on({
     mouseover: (e) => highlightFeature(e, infoDashboard),
     mouseout: (e) => resetHighlight(e, infoDashboard),
@@ -64,4 +64,15 @@ export const createDiv = (infoDashboard, className) => {
 
 export const createContent = (infoDashboard, props) => {
   infoDashboard._div.innerHTML = "<h4>регионы Кр</h4>" + (props ? "<b>" + props.id + "</b><br />" : "");
+};
+
+export const createScaleDirectory = () => {
+  let div = L.DomUtil.create("div", "infoDashboard scale");
+  let grades = [0, 1, 2, 3, 4, 5];
+
+  for (let i = 0; i < grades.length; i++) {
+    div.innerHTML += '<i style="background:' + getGumusColor(grades[i] + 1) + '"></i> ' + grades[i] + (grades[i + 1] ? "&ndash;" + grades[i + 1] + " гумус" + "<br>" : "+");
+  }
+
+  return div;
 };

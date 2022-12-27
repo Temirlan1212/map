@@ -16,11 +16,11 @@
   color: #777;
 }
 
-.legend {
+.scale {
   line-height: 18px;
   color: #555;
 }
-.legend i {
+.scale i {
   width: 18px;
   height: 18px;
   float: left;
