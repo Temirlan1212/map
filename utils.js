@@ -7,46 +7,21 @@ export function getGumusColor(gumus) {
   return gumus > 5 ? "#800026" : gumus > 4 ? "#BD0026" : gumus > 3 ? "#E31A1C" : gumus > 2 ? "#FC4E2A" : gumus > 1 ? "#FD8D3C" : gumus > 0 ? "#FEB24C" : "#FFFFFF";
 }
 
-export function disctrictStyle(feature, regionName, item) {
-  const bool = regionName.split(" ")[0].toLowerCase() === feature.id.split(" ")[0].toLowerCase();
-  if (bool) {
-    feature.color = getGumusColor(item.gumus);
-    feature["gumus"] = item.gumus;
-    feature["region"] = item.region;
-    console.log(feature);
-
-    let test = JSON.parse(localStorage.getItem("test"));
-
-    if (test?.items) {
-      let newObj = {
-        items: [],
-      };
-
-      newObj.items = [...test.items, feature];
-
-      localStorage.setItem("test", JSON.stringify(newObj));
-    } else {
-      let newObj = {
-        items: [],
-      };
-      localStorage.setItem("test", JSON.stringify(newObj));
-    }
-  }
-
+export function disctrictStyle(feature) {
   return {
     fillColor: feature.color,
-    weight: 2,
+    weight: 1,
     opacity: 1,
     color: "gray",
     dashArray: "3",
-    fillOpacity: 0.6,
+    fillOpacity: feature.gumus === 0 ? 0 : 0.6,
   };
 }
 
 export function highlightFeature(e, infoDashboard) {
   e.target.setStyle({
-    weight: 5,
-    color: "#666",
+    weight: 2,
+    color: "rgb(68, 68, 68)",
     dashArray: "",
     fillOpacity: 0.7,
   });
@@ -84,11 +59,11 @@ export const createDiv = (infoDashboard, className) => {
 };
 
 export const createContent = (infoDashboard, props) => {
-  infoDashboard._div.innerHTML = "<h4>районы Кр</h4>" + (props ? "<b>" + props.id + "</b><br />" : "");
+  infoDashboard._div.innerHTML = `<h4>Районы Кыргызстана</h4> ${props ? "<b>" + props.id + "</b><br />" + "<b>" + props.gumus.toFixed(2) + " гумус" + "</b><br />" + "<b>" + props.region + " область" + "</b><br />" : ""}`;
 };
 
 export const createScaleDirectory = () => {
-  let div = L.DomUtil.create("div", "infoDashboard scale");
+  let div = L.DomUtil.create("div", "scale");
   let grades = [0, 1, 2, 3, 4, 5];
 
   for (let i = 0; i < grades.length; i++) {
