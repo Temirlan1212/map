@@ -1183,6 +1183,7 @@ export const DjalalAbadData = {
       type: "Feature",
       properties: {},
       id: "Сузакский р-н",
+      color: "#E31A1C",
       code: "343",
       total: "200",
       geometry: {
@@ -3217,6 +3218,7 @@ export const DjalalAbadData = {
       type: "Feature",
       properties: {},
       id: "Токтогульский р-н",
+      color: "#FD8D3C",
       code: "346",
       total: "400",
       geometry: {
@@ -8339,6 +8341,7 @@ export const DjalalAbadData = {
       type: "Feature",
       properties: {},
       id: "Аксыйский р-н",
+      color: "#FD8D3C",
       code: "333",
       total: "800",
       geometry: {

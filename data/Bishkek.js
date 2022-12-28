@@ -906,6 +906,7 @@ export const BishkekData = {
       type: "Feature",
       properties: {},
       id: "Октябрьский р-н",
+      color: "#E31A1C",
       code: "155",
       total: "200",
       geometry: {

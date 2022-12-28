@@ -881,6 +881,7 @@ export const TalasData = {
       type: "Feature",
       properties: {},
       id: "Манасский р-н",
+      color: "#FEB24C",
       total: "200",
       geometry: {
         type: "MultiPolygon",
@@ -1524,6 +1525,7 @@ export const TalasData = {
       type: "Feature",
       properties: {},
       id: "Бакай-Атинский р-н",
+      color: "#800026",
       total: "300",
       geometry: {
         type: "MultiPolygon",
@@ -2498,6 +2500,7 @@ export const TalasData = {
       type: "Feature",
       properties: {},
       id: "Таласский р-н",
+      color: "#FC4E2A",
       total: "400",
       geometry: {
         type: "Polygon",

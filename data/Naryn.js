@@ -5,6 +5,7 @@ export const NarynData = {
       type: "Feature",
       properties: {},
       id: "Ак-Талинский р-н",
+      color: "#FD8D3C",
       total: "500",
       geometry: {
         type: "MultiPolygon",
@@ -1087,6 +1088,7 @@ export const NarynData = {
       type: "Feature",
       properties: {},
       id: "Жумгальский р-н",
+      color: "#FC4E2A",
       total: "1000",
       geometry: {
         type: "MultiPolygon",
@@ -2452,6 +2454,7 @@ export const NarynData = {
       type: "Feature",
       properties: {},
       id: "Кочкорский р-н",
+      color: "#E31A1C",
       total: "100",
       geometry: {
         type: "Polygon",
@@ -4193,6 +4196,7 @@ export const NarynData = {
       type: "Feature",
       properties: {},
       id: "Нарынский р-н",
+      color: "#FC4E2A",
       total: "200",
       geometry: {
         type: "MultiPolygon",
@@ -6116,6 +6120,7 @@ export const NarynData = {
       type: "Feature",
       properties: {},
       id: "Ат-Башинский р-н",
+      color: "#FC4E2A",
       total: "300",
       geometry: {
         type: "Polygon",

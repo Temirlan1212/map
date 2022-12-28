@@ -1,4 +1,4 @@
-export const useGetAverageGumus = (analysesData) => {
+export const useGetAverageGumus = (analysesData, key) => {
   const regions = analysesData.map((elem) => {
     return elem["район"];
   });
@@ -11,18 +11,18 @@ export const useGetAverageGumus = (analysesData) => {
     dataCount[regions[i]] = 0;
     for (let j = 1; j < analysesData.length; j++) {
       if (regions[i] === regions[j]) {
-        data[regions[i]] += +analysesData[i]["гумус, %"];
+        data[regions[i]] += +analysesData[i][key];
         dataCount[regions[i]] += 1;
       }
     }
   }
 
-  let avarageDatasOfGumus = [];
+  let listOfAvarageCounts = [];
   const keys = Object.keys(dataCount);
 
   for (let i = 0; i < analysesData.length; i++) {
-    avarageDatasOfGumus[keys[i]] = data[keys[i]] / dataCount[keys[i]];
+    listOfAvarageCounts[keys[i]] = data[keys[i]] / dataCount[keys[i]];
   }
 
-  return { avarageDatasOfGumus };
+  return listOfAvarageCounts;
 };

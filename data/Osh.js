@@ -1233,6 +1233,7 @@ export const OshData = {
       type: "Feature",
       properties: {},
       id: "Ноокатский р-н",
+      color: "#FC4E2A",
       total: "200",
       geometry: {
         type: "MultiPolygon",
@@ -2202,6 +2203,7 @@ export const OshData = {
       type: "Feature",
       properties: {},
       id: "Алайский р-н",
+      color: "#FD8D3C",
       total: "300",
       geometry: {
         type: "MultiPolygon",

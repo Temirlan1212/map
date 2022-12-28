@@ -5,6 +5,7 @@ export const YssykKolData = {
       type: "Feature",
       properties: {},
       id: "Иссык-Кульский р-н",
+      color: "#BD0026",
       total: "100",
       geometry: {
         type: "Polygon",
@@ -9893,6 +9894,7 @@ export const YssykKolData = {
       },
     },
     {
+      color: "#800026",
       type: "Feature",
       properties: {},
       id: "Тюпский р-н",
@@ -20868,6 +20870,7 @@ export const YssykKolData = {
     {
       type: "Feature",
       properties: {},
+      color: "#FD8D3C",
       id: "Тонский р-н",
       total: "300",
       geometry: {
@@ -26507,6 +26510,7 @@ export const YssykKolData = {
       type: "Feature",
       properties: {},
       id: "Жети-Огузский р-н",
+      color: "#800026",
       total: "400",
       geometry: {
         type: "Polygon",
@@ -29693,6 +29697,7 @@ export const YssykKolData = {
       type: "Feature",
       properties: {},
       id: "Ак-Суйский р-н",
+      color: "#BD0026",
       total: "500",
       geometry: {
         type: "Polygon",

@@ -13,18 +13,17 @@ import { cartoDB_DarkMatter, googleSat, googleStreets, osm, stamen_Watercolor } 
 
 const map = L.map("map").setView([41.1928749994, 74.1323169961], 7);
 
-const { avarageDatasOfGumus } = useGetAverageGumus(analysesData);
+// const avarageDatasOfGumus = useGetAverageGumus(analysesData, "гумус, %");
+
 const regionsData = [NarynData, OshData, ChuyData, DjalalAbadData, BatkenData, TalasData, YssykKolData, BishkekData];
 
 const infoDashboard = L.control();
 
-for (let [key, value] of Object.entries(avarageDatasOfGumus)) {
-  for (let polygon of regionsData) {
-    L.geoJSON(polygon, {
-      onEachFeature: (_, layer) => onEachFeature(layer, infoDashboard, map),
-      style: (feature) => regionStyle(feature, key, value),
-    }).addTo(map);
-  }
+for (let polygon of regionsData) {
+  L.geoJSON(polygon, {
+    onEachFeature: (_, layer) => onEachFeature(layer, infoDashboard, map),
+    style: (feature) => regionStyle(feature),
+  }).addTo(map);
 }
 
 infoDashboard.update = (props) => createContent(infoDashboard, props);

@@ -6,19 +6,14 @@ export function getGumusColor(gumus) {
   return gumus > 5 ? "#800026" : gumus > 4 ? "#BD0026" : gumus > 3 ? "#E31A1C" : gumus > 2 ? "#FC4E2A" : gumus > 1 ? "#FD8D3C" : gumus > 0 ? "#FEB24C" : "#FFFFFF";
 }
 
-export function regionStyle(feature, regionName, gumus) {
-  const bool = regionName.split(" ")[0].toLowerCase() === feature.id.split(" ")[0].toLowerCase();
-  if (bool) {
-    feature.color = getGumusColor(gumus);
-  }
-
+export function regionStyle(feature) {
   return {
     fillColor: feature.color,
     weight: 2,
     opacity: 1,
     color: "gray",
     dashArray: "3",
-    fillOpacity: 0.9,
+    fillOpacity: 0.6,
   };
 }
 
@@ -38,7 +33,7 @@ export function highlightFeature(e, infoDashboard) {
 }
 
 export function resetHighlight(e, infoDashboard) {
-  let style = { weight: 2, color: "gray", dashArray: "3" };
+  let style = { weight: 2, color: "gray", dashArray: "3", fillOpacity: 0.6 };
   e.target.setStyle(style);
 
   infoDashboard.update();

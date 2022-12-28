@@ -5,6 +5,7 @@ export const ChuyData = {
       type: "Feature",
       properties: {},
       id: "Московский р-н",
+      color: "#FC4E2A",
       code: "808",
       total: "100",
       geometry: {
@@ -575,6 +576,9 @@ export const ChuyData = {
       type: "Feature",
       properties: {},
       id: "Чуйский р-н",
+      color
+: 
+"#E31A1C",
       code: "811",
       total: "200",
       geometry: {
@@ -1183,6 +1187,9 @@ export const ChuyData = {
       type: "Feature",
       properties: {},
       id: "Сокулукский р-н",
+      color
+: 
+"#800026",
       code: "809",
       total: "300",
       geometry: {
@@ -2466,6 +2473,9 @@ export const ChuyData = {
       type: "Feature",
       properties: {},
       id: "Панфиловский р-н",
+      color
+: 
+"#FD8D3C",
       code: "863",
       total: "400",
       geometry: {
@@ -4434,6 +4444,9 @@ export const ChuyData = {
       type: "Feature",
       properties: {},
       id: "Кеминский р-н",
+      color
+: 
+"#FC4E2A",
       code: "806",
       total: "500",
       geometry: {
@@ -5932,6 +5945,9 @@ export const ChuyData = {
       type: "Feature",
       properties: {},
       id: "Жайылский р-н",
+      color
+: 
+"#FD8D3C",
       code: "804",
       total: "600",
       geometry: {
@@ -7012,6 +7028,9 @@ export const ChuyData = {
       type: "Feature",
       properties: {},
       id: "Ыссык-Атинский р-н",
+      color
+: 
+"#FD8D3C",
       code: "862",
       total: "700",
       geometry: {
@@ -7532,6 +7551,9 @@ export const ChuyData = {
       type: "Feature",
       properties: {},
       id: "Аламудунский р-н",
+      color
+: 
+"#E31A1C",
       code: "858",
       total: "800",
       geometry: {

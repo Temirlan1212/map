@@ -1518,6 +1518,7 @@ export const BatkenData = {
       type: "Feature",
       properties: {},
       id: "Лейлекский р-н",
+      color: "#FD8D3C",
       code: "538",
       total: "200",
       geometry: {
@@ -2912,6 +2913,7 @@ export const BatkenData = {
       type: "Feature",
       properties: {},
       id: "Баткенский р-н",
+      color: "#FEB24C",
       code: "531",
       total: "300",
       geometry: {
