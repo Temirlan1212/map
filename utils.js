@@ -9,12 +9,12 @@ export function getGumusColor(gumus) {
 
 export function disctrictStyle(feature) {
   return {
-    fillColor: feature.color,
+    fillColor: feature.color ? feature.color : "rgba(68, 68, 68, 0.6)",
     weight: 1,
     opacity: 1,
     color: "gray",
     dashArray: "3",
-    fillOpacity: feature.gumus === 0 ? 0 : 0.6,
+    fillOpacity: 0.6,
   };
 }
 
