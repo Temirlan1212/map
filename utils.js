@@ -1,12 +1,38 @@
 export const onEachFeatureFunc = (feature, layer) => {
   layer.bindPopup(feature.id);
 };
+// "#800026" "#BD0026" "#E31A1C" "#FC4E2A" "#FD8D3C"  "#FEB24C"
 
 export function getGumusColor(gumus) {
   return gumus > 5 ? "#800026" : gumus > 4 ? "#BD0026" : gumus > 3 ? "#E31A1C" : gumus > 2 ? "#FC4E2A" : gumus > 1 ? "#FD8D3C" : gumus > 0 ? "#FEB24C" : "#FFFFFF";
 }
 
-export function regionStyle(feature) {
+export function disctrictStyle(feature, regionName, item) {
+  const bool = regionName.split(" ")[0].toLowerCase() === feature.id.split(" ")[0].toLowerCase();
+  if (bool) {
+    feature.color = getGumusColor(item.gumus);
+    feature["gumus"] = item.gumus;
+    feature["region"] = item.region;
+    console.log(feature);
+
+    let test = JSON.parse(localStorage.getItem("test"));
+
+    if (test?.items) {
+      let newObj = {
+        items: [],
+      };
+
+      newObj.items = [...test.items, feature];
+
+      localStorage.setItem("test", JSON.stringify(newObj));
+    } else {
+      let newObj = {
+        items: [],
+      };
+      localStorage.setItem("test", JSON.stringify(newObj));
+    }
+  }
+
   return {
     fillColor: feature.color,
     weight: 2,
